@@ -1,13 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+	
+</head>	
+	
+  <body>
 	<div class="container" id="todo">
-			
-			<section class="panel">	
-
-				<input type="checkbox" id="mark-all" @click="selectAll" :checked="areAllSelected">
-				<input v-model="newTask" @keyup.enter="addTask" placeholder="What do you need to do?" autofocus class="text-input">
-				<button @click="clearList">Clear List</button>
-
-			</section>
+	  <section class="panel">	
+		<input type="checkbox" id="mark-all" @click="selectAll" :checked="areAllSelected">
+		<input v-model="newTask" @keyup.enter="addTask" placeholder="What do you need to do?" autofocus class="text-input">
+		<button @click="clearList">Clear My List</button>
+         </section>
 
 			<section class="list">
 
