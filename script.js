@@ -17,12 +17,12 @@
 		   {
 		    text: "This is an example task. Delete or add your own",
 		    checked: false
-				}
-			],
+		     }
+		    ],
 
-			editingTask: {
+		    editingTask: {
 
-			}
+		  }
 		},
 		
 		computed: {
@@ -39,12 +39,12 @@
 			  if (task) {
 			  this.tasks.push({text: task, checked: false});
 			  this.newTask = "";
-				}
+			  }
 			 },
 
 			removeTask: function (task) {
-        var index = this.tasks.indexOf(task);
-				this.tasks.splice(index, 1);
+                        var index = this.tasks.indexOf(task);
+			this.tasks.splice(index, 1);
 			},
 
 			editTask: function (task) {
@@ -55,21 +55,19 @@
 				this.editingTask = {};
 				if (task.text.trim() === ""){
 					this.removeTask(task);
-				}
-				
-			},
+		           }
+			 },
 
 			clearList: function () {
 				this.tasks = [
-
-				];
+			  ];
 			},
 
 			selectAll: function (task) {
-				var targetValue = this.areAllSelected ? false : true;
+				var targetValue = this.areAllSelected ? false : true;true;
 				for (var i = 0; i < this.tasks.length; i++) {
 					this.tasks[i].checked = targetValue;
-				}
+			  }
 			},
 
 			check: function (task) {
@@ -79,6 +77,5 @@
 			isChecked: function (task) {
 				return task.checked;
 			}
-
-		}
-	});
+	             }
+	        });
